@@ -4,10 +4,11 @@
 This is my portfolio designed using React Next.js and Tailwind CSS.
 Reference video tutorial: https://www.youtube.com/watch?v=Y2kGqbzvAn4&t=159s 
 
-Contact Form is created using web3forms by creating access key for my email.
+Web3forms is used for Contact Form by creating access key for my email. (this access key need not to be put on env file, its public key)
 
 Framer Motion is used for animations in the site.
 
+Vercel is used for deployment. (Abdul's projects/portfolio)
 
 # Instructions 
 
