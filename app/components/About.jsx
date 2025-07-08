@@ -58,7 +58,7 @@ const About = ({ isDarkMode }) => {
             I enjoy turning complex problems into clean, user-friendly web
             applications. With experience in responsive design and performance
             optimization, I aim to create fast, accessible, and visually
-            engaging web applications. I'm always eager to learn and explore new
+            engaging web applications. I am always eager to learn and explore new
             tools and technologies that enhance my skills.
           </p>
 
