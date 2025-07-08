@@ -10,7 +10,7 @@ const About = ({ isDarkMode }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="mt-20 w-full px-[12%] py-20 scroll-mt-15"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -33,7 +33,7 @@ const About = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="flex w-full flex-col lg:flex-row items-center gap-20 my-20"
+        className="flex w-full flex-col lg:flex-row items-center gap-20 my-16"
       >
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -45,6 +45,7 @@ const About = ({ isDarkMode }) => {
             src={assets.user_image}
             alt="user-picture"
             className="w-full rounded-3xl"
+            loading="lazy"
           />
         </motion.div>
         <motion.div
@@ -54,11 +55,11 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-            corrupti dolores voluptates repellat doloribus optio quasi ullam
-            quisquam vitae corporis quia, dicta, id sed labore explicabo quis
-            exercitationem inventore dolor. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit.
+            I enjoy turning complex problems into clean, user-friendly web
+            applications. With experience in responsive design and performance
+            optimization, I aim to create fast, accessible, and visually
+            engaging web applications. I'm always eager to learn and explore new
+            tools and technologies that enhance my skills.
           </p>
 
           <motion.ul
@@ -108,7 +109,13 @@ const About = ({ isDarkMode }) => {
                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500"
                 key={index}
               >
-                <Image src={tool} alt="tool-icon" className="w-5 sm:w-7" />
+                <Image
+                  src={tool.toolIcon}
+                  alt={tool.toolName}
+                  className="w-5 sm:w-7"
+                  title={tool.toolName}
+                  loading="lazy"
+                />
               </motion.li>
             ))}
           </motion.ul>

@@ -54,7 +54,7 @@ function Services() {
           >
             <Image src={icon} alt={title} className="w-10" />
             <h3 className="text-lg my-4 text-gray-700 dark:text-white">
-              {title}{" "}
+              {title}
             </h3>
             <p className="text-sm text-gray-600 leading-5 dark:text-white/80">
               {description}

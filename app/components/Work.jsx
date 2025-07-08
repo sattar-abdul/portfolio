@@ -9,7 +9,7 @@ function Work() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="work"
-      className="w-full px-[12%] py-5 scroll-mt-20"
+      className="w-full px-5 sm:px-10 lg:px-[12%] py-5 scroll-mt-20"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -50,7 +50,7 @@ function Work() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             key={index}
-            className="h-72 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+            className="h-72 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group border border-4 border-gray-500 dark:border-white"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
             <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 border border-black">

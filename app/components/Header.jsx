@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 function Header() {
   return (
-    <div className="pt-20 w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <div className="pt-80 pb-48 w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}

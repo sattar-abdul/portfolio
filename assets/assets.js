@@ -76,7 +76,7 @@ export const workData = [
   {
     title: "Full-stack project",
     description:
-      "AirBnb clone with all the functionalites. HTML, CSS, Express, Node, MongoDb & Ejs",
+      "AirBnb clone with all the functionalites. MERN stack project with EJS",
     bgImage: "/work-1.png",
     liveLink: "https://wanderlust-jbuq.onrender.com/",
     codeLink: "https://github.com/sattar-abdul/wanderlust",
@@ -91,9 +91,9 @@ export const workData = [
   },
   {
     title: "Personal Portfolio",
-    description: "Created a portfolio using React js, Next js, Tailwind CSS",
+    description: "Created my personal portfolio using React js, Next js, Tailwind CSS",
     bgImage: "/work-3.png",
-    liveLink: "",
+    liveLink: "https://portfolio-six-xi-v8g7z9rtzv.vercel.app/",
     codeLink: "https://github.com/sattar-abdul/react-portfolio",
   },
   {
@@ -143,9 +143,9 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.vscode_Logo,
-  assets.render_Logo,
-  assets.mongodb_Logo,
-  assets.hoppscotch_Logo,
-  assets.git_Logo,
+  { toolName: "Visual studio code", toolIcon: assets.vscode_Logo },
+  { toolName: "Render", toolIcon: assets.render_Logo },
+  { toolName: "MongoDB", toolIcon: assets.mongodb_Logo },
+  { toolName: "Hoppscotch", toolIcon: assets.hoppscotch_Logo },
+  { toolName: "Git", toolIcon: assets.git_Logo },
 ];
