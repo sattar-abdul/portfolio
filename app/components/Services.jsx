@@ -10,7 +10,7 @@ function Services() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="services"
-      className="w-full px-[12%] py-5 scroll-mt-20"
+      className="w-full px-[12%] pb-5 scroll-mt-20"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -33,7 +33,7 @@ function Services() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+        className="text-left md:text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
         I have experience in building full-stack web applications that are
         responsive, reliable, and user-friendly. From frontend to backend, I

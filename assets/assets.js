@@ -10,6 +10,11 @@ import render_Logo from "./render_Logo.jpeg";
 import hoppscotch_Logo from "./hoppscotch_Logo.png";
 import git_Logo from "./git_Logo.png";
 import mongodb_Logo from "./mongodb_Logo.png";
+import vercel_Logo from "./vercel_Logo.jpeg";
+import postman_Logo from "./postman_Logo.png";
+import nodeJs_Logo from "./nodeJs_Logo.png";
+import bootstrap_Logo from "./bootstrap_Logo.png";
+import redux_Logo from "./redux_Logo.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
@@ -47,6 +52,11 @@ export const assets = {
   hoppscotch_Logo,
   git_Logo,
   mongodb_Logo,
+  vercel_Logo,
+  postman_Logo,
+  nodeJs_Logo,
+  bootstrap_Logo,
+  redux_Logo,
   right_arrow_white,
   logo,
   logo_dark,
@@ -91,7 +101,8 @@ export const workData = [
   },
   {
     title: "Personal Portfolio",
-    description: "Created my personal portfolio using React js, Next js, Tailwind CSS",
+    description:
+      "Created my personal portfolio using React js, Next js, Tailwind CSS",
     bgImage: "/work-3.png",
     liveLink: "https://portfolio-six-xi-v8g7z9rtzv.vercel.app/",
     codeLink: "https://github.com/sattar-abdul/react-portfolio",
@@ -126,7 +137,7 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Next Js",
+    description: "HTML, CSS, JavaScript, Java, C/C++",
   },
   {
     icon: assets.edu_icon,
@@ -148,4 +159,9 @@ export const toolsData = [
   { toolName: "MongoDB", toolIcon: assets.mongodb_Logo },
   { toolName: "Hoppscotch", toolIcon: assets.hoppscotch_Logo },
   { toolName: "Git", toolIcon: assets.git_Logo },
+  { toolName: "Vercel", toolIcon: assets.vercel_Logo },
+  { toolName: "Postman", toolIcon: assets.postman_Logo },
+  { toolName: "Node Js", toolIcon: assets.nodeJs_Logo },
+  { toolName: "Bootstrap", toolIcon: assets.bootstrap_Logo },
+  { toolName: "Redux", toolIcon: assets.redux_Logo },
 ];

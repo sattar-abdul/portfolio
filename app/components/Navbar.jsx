@@ -15,21 +15,27 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
 
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden ">
+      {/* background of header */}
+      {/* <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden ">
         <Image
           src={assets.header_bg_color}
           alt="header-background"
           className="w-full"
         />
-      </div>
+      </div> */}
 
-      <nav
+      {/* old nav-background style code */}
+      {/* <nav
         role="navigation"
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-2.5 flex items-center justify-between z-50 ${
           isDarkMode
             ? "dark:bg-darkTheme dark:shadow-white/20"
             : "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm"
         }`}
+      > */}
+      <nav
+        role="navigation"
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-2.5 flex items-center justify-between z-50 bg-[url('/footer-bg-color.png')] bg-center dark:bg-none bg-opacity-50 backdrop-blur-lg shadow-sm`}
       >
         <a href="#top">
           <Image

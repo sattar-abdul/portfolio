@@ -33,10 +33,10 @@ function Work() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+        className="text-left md:text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
         I have worked on various project. Here is the list of my Latest projects
-        or projects that i have contributed to along with tech stack used.
+        or projects that I have contributed to along with tech stack used.
       </motion.p>
 
       <motion.div
@@ -51,9 +51,12 @@ function Work() {
             transition={{ duration: 0.3 }}
             key={index}
             className="h-72 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group border border-4 border-gray-500 dark:border-white"
-            style={{ backgroundImage: `url(${project.bgImage})` }}
+            style={{ backgroundImage: `url(${project.bgImage})`}}
           >
-            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 border border-black">
+            
+            <div
+              className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 border border-black opacity-0 translate-y-3 duration-500 group-hover:opacity-100 group-hover:translate-y-0 group-hover:bottom-7 pointer-events-none group-hover:pointer-events-auto"
+            >
               <div>
                 <h2 className="font-semibold">{project.title}</h2>
                 <p className="text-sm text-gray-700">{project.description}</p>

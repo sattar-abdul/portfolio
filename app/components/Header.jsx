@@ -22,18 +22,18 @@ function Header() {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.35 }}
-        className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo"
+        className="flex items-end gap-2 text-xl md:text-2xl mb-2 font-Ovo"
       >
-        {"Hi! I'm Abdul Sattar"}
-        <Image src={assets.hand_icon} alt="hand-icon" className="w-6" />
+        Hi! I&apos;m Abdul Sattar
+        <Image src={assets.hand_icon} alt="hand-icon" className="w-6 mb-1" />
       </motion.h3>
       <motion.h1
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
+        className="text-3xl sm:text-6xl lg:text-5xl font-Ovo"
       >
-        Full-stack web developer based in India.
+        Full-stack web developer<br />based in India.
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ function Header() {
         className="max-w-2xl mx-auto font-Ovo"
       >
         Computer Science undergraduate and passionate web developer with
-        hands-on experience in C/C++, Node.js and modern JavaScript frameworks.
+        hands-on experience in C/C++, Java, Node.js and modern JavaScript frameworks.
         Eager to apply and grow my skills through impactful, real-world projects
         and collaborative opportunities.
       </motion.p>
@@ -52,7 +52,7 @@ function Header() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
           href="#contact"
-          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent"
+          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent hover:bg-gray-800"
         >
           Contact me
           <Image
@@ -67,7 +67,7 @@ function Header() {
           transition={{ duration: 0.6, delay: 1.2 }}
           href="/Abdul_Sattar_Resume.pdf"
           download
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
+          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black hover:bg-gray-200"
         >
           My Resume
           <Image
