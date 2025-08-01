@@ -17,11 +17,19 @@ layout.js handles the layout of web page.
 
 NOTE: I am using Next.js version 14 and not 15.
 
-## Want to update Image/background Image/Resume pdf?
+## Want to update Image/background Image/Resume?
 Just replace old one with new Image/background Image/Resume pdf with the same name.
 Example: If old file that you want to update is called `icon.jpg`, then new file should also be named `icon.jpg`.
 
 
-Resume pdf is in Public folder
+Resume.pdf is in Public folder
 All other media is in assets folder
 
+
+## How to run the project?
+The prokect is deployed on render.
+
+To run locally:
+1. Open the project folder
+2. Run: `npm install`
+3. Run: `npm run dev`
