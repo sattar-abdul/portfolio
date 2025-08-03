@@ -50,41 +50,45 @@ function Work() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             key={index}
-            className="h-72 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group border border-4 border-gray-500 dark:border-white"
-            style={{ backgroundImage: `url(${project.bgImage})`}}
+            className="group h-72 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer border-2 border-gray-500"
+            style={{ backgroundImage: `url(${project.bgImage})` }}
           >
-            
-            <div
-              className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 border border-black opacity-0 translate-y-3 duration-500 group-hover:opacity-100 group-hover:translate-y-0 group-hover:bottom-7 pointer-events-none group-hover:pointer-events-auto"
-            >
-              <div>
-                <h2 className="font-semibold">{project.title}</h2>
-                <p className="text-sm text-gray-700">{project.description}</p>
-              </div>
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none rounded-lg"></div>
 
-              <div className="flex gap-3">
-                {project.liveLink && (
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-black text-white text-sm px-4 py-1 rounded hover:bg-gray-800 transition"
-                  >
-                    Live
-                  </a>
-                )}
-                {project.codeLink && (
-                  <a
-                    href={project.codeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border border-black text-sm px-4 py-1 rounded hover:bg-black hover:text-white transition"
-                  >
-                    Code
-                  </a>
-                )}
+            {/* project title and description */}
+            <div className="bg-black/40 backdrop-blur-md shadow-sm w-11/12 rounded-md absolute top-5 left-1/2 -translate-x-1/2 py-2 px-4 flex items-center justify-between duration-500 group-hover:top-7 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:top-7 pointer-events-none group-hover:pointer-events-auto">
+              <div>
+                <h2 className="font-semibold text-white/80">{project.title}</h2>
+                <p className="text-sm text-white/70">{project.description}</p>
               </div>
             </div>
+            {/* Live and code buttons for projects */}
+            {(project.liveLink || project.codeLink) && (
+              <div className="bg-black/40 backdrop-blur-md shadow-sm rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-0 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:bottom-2 pointer-events-none group-hover:pointer-events-auto">
+                <div className="flex gap-3">
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-black text-white text-sm px-4 py-1 rounded hover:bg-gray-800 transition"
+                    >
+                      Live
+                    </a>
+                  )}
+                  {project.codeLink && (
+                    <a
+                      href={project.codeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-white text-white text-sm px-4 py-1 rounded hover:bg-white hover:text-black transition"
+                    >
+                      Code
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
           </motion.div>
         ))}
       </motion.div>

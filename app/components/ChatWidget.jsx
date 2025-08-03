@@ -53,7 +53,7 @@ export default function ChatWidget({ isDarkMode }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="fixed bottom-20 right-2 bg-gray-800 text-white text-xs px-3 py-1 rounded-full shadow-lg mb-2 dark:bg-darkHover"
+          className="hidden md:block fixed bottom-20 right-2 bg-gray-800 text-white text-xs px-3 py-1 rounded-full shadow-lg mb-2 dark:bg-darkHover"
         >
           <span className="flex space-x-1">
             <span>Ask AI !</span>
