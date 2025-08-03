@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
+import { getBotReply } from "../chat/simpleBot";
 
 export default function ChatWidget({ isDarkMode }) {
   const [open, setOpen] = useState(false);
@@ -18,30 +19,16 @@ export default function ChatWidget({ isDarkMode }) {
   const sendMessage = async () => {
     const msg = input.trim();
     if (!msg) return;
-
     setMessage((prev) => [...prev, { sender: "user", text: msg }]);
     setInput("");
     setLoading(true);
 
-    try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: msg }),
-      });
-      const data = await res.json();
-      setMessage((prev) => [...prev, { sender: "bot", text: data.response }]);
-    } catch (e) {
-      setMessage((prev) => [
-        ...prev,
-        {
-          sender: "bot",
-          text: "Sorry, something went wrong. Please try again.",
-        },
-      ]);
-    } finally {
+    const botAns = getBotReply(msg);
+
+    setTimeout(() => {
+      setMessage((prev) => [...prev, { sender: "bot", text: botAns }]);
       setLoading(false);
-    }
+    }, 600); // small fake delay for better UX
   };
 
   //logic for auto scroll in chat panel
@@ -51,8 +38,31 @@ export default function ChatWidget({ isDarkMode }) {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]); // triggers on every message update
 
+  // suggestion prompts
+  const examplePrompts = [
+    "What skills does Abdul have?",
+    "Tell me about Abdul’s projects",
+    "What are Abdul’s future goals?",
+  ];
+
   return (
     <>
+      {/* animated tooltip for chat toggle button*/}
+      {!open && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="fixed bottom-20 right-2 bg-gray-800 text-white text-xs px-3 py-1 rounded-full shadow-lg mb-2 dark:bg-darkHover"
+        >
+          <span className="flex space-x-1">
+            <span>Ask AI !</span>
+            <span className="animate-bounce">.</span>
+            <span className="animate-bounce delay-50">.</span>
+            <span className="animate-bounce delay-150">.</span>
+          </span>
+        </motion.div>
+      )}
       {/* Floating toggle button for chatbot*/}
       {!open && (
         <motion.div
@@ -63,7 +73,7 @@ export default function ChatWidget({ isDarkMode }) {
           aria-label="Open chat"
           className="fixed bottom-4 right-4 z-[60] rounded-full p-0.5 bg-gradient-to-r from-blue-500 to-purple-500 hover:shadow-lg"
         >
-          <motion.button className="rounded-full p-3 shadow-md bg-white hover:bg-gray-300 duration-100">
+          <motion.button className="rounded-full p-3 shadow-md bg-white hover:bg-gray-200 duration-100">
             {/* Chat icon */}
             <Image src={assets.chatbot} className="h-9 w-9" />
           </motion.button>
@@ -118,14 +128,29 @@ export default function ChatWidget({ isDarkMode }) {
               ))}
               <div ref={messagesEndRef} />
               {loading && (
-                <div className="mr-auto max-w-[85%] rounded-lg bg-gray-100 text-gray-700 px-3 py-2 text-xs dark:bg-darkTheme dark:text-white-400">
+                <div className="mr-auto max-w-[85%] rounded-lg bg-gray-100 text-gray-800 px-3 py-2 text-xs dark:bg-darkTheme dark:text-white">
                   Typing…
                 </div>
               )}
             </div>
 
+            {/*suggestion prompts*/}
+            {!(message.length > 1) && (
+              <div className="flex flex-wrap gap-2 p-3 pt-1">
+                {examplePrompts.map((p, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setInput(p)}
+                    className="text-sm/7 bg-gray-200 dark:bg-darkHover px-3 py-1 rounded-2xl hover:bg-gray-300"
+                  >
+                    {p}
+                  </button>
+                ))}
+              </div>
+            )}
+
             {/* input */}
-            <div className="flex items-center gap-2 p-3 border-t border-gray-200 dark:border-neutral-800">
+            <div className="flex items-center gap-2 p-3 mb-2 pb-1 border-t border-gray-200 dark:border-neutral-800">
               <input
                 className="flex-1 rounded-md border border-gray-300 px-3 py-2 text-sm text-black outline-none focus:ring-1 focus:ring-gray-300 dark:bg-darkTheme dark:text-white"
                 placeholder="Ask me anything about Abdul…"

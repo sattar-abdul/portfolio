@@ -1,32 +1,83 @@
-// contains my Bio data from resume
-const resumeBio = `
-Md Abdul Sattar is a Computer Engineering student at Bhilai Institute of Technology, Durg with a CGPA of 9.13 (expected graduation in 2026). He has strong experience in full-stack web development using MERN stack, Flask, and EJS, as well as proficiency in C/C++, Python, Java, and SQL.
+const resumeData = {
+  name: "Md Abdul Sattar",
+  title: "Computer Engineering Student",
+  college: "Bhilai Institute of Technology, Durg",
+  graduation: "2026",
+  cgpa: "9+",
 
-Projects:
-- WanderLust: Full-stack Airbnb clone (MERN + EJS) with secure user authentication and MapTiler API integration.
-- Spotify Clone: Frontend clone using HTML, CSS, JavaScript with responsive design and DOM manipulation.
-- Student Feedback System: Flask + SQL platform with role-based access for students and professors.
+  skills: {
+    programming: ["C/C++", "Python", "Java", "SQL"],
+    web: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Flask",
+      "EJS",
+    ],
+    tools: ["Git", "GitHub", "REST APIs", "Redux", "Tableau"],
+    ai: ["Basics of ML", "Basics of ANN", "Basics of AI"],
+  },
 
-Experience:
-- Vocational Training at S.E.C. Railways (June 2025): Learned about Passenger Reservation Systems and Integrated Passenger Information Systems.
-- Python Programmer Intern at Codsoft (June 2024): Developed automation scripts to enhance team productivity.
+  projects: [
+    {
+      name: "WanderLust",
+      description:
+        "Full-stack Airbnb clone using MERN + EJS with secure auth and MapTiler API integration.",
+    },
+    {
+      name: "Spotify Clone",
+      description:
+        "Frontend clone using HTML, CSS, JS with DOM manipulation and responsive UI.",
+    },
+    {
+      name: "Student Feedback System",
+      description:
+        "Flask + SQL app with role-based access for students and professors.",
+    },
+    {
+      name: "Personal Portfolio",
+      description:
+        "Portfolio showcasing skils and projects. Tech used are Next.js, Tailwind CSS, Framer Motion",
+    },
+  ],
 
-Skills:
-- Web Development: HTML, CSS, Bootstrap, JavaScript, Flask, MongoDB, Express, React, Node.js
-- Programming: C/C++, Python, Java, SQL
-- Tools: Git, GitHub, REST APIs, Redux, Tableau
-- AI/ML: Basics of ANN, ML, and DL
+  experience: [
+    {
+      title: "Vocational Training",
+      company: "South East Central Railways",
+      date: "June 2025",
+      description:
+        "Learned Passenger Reservation Systems and Integrated Passenger Info Systems.",
+    },
+  ],
 
-Certifications:
-- Artificial Intelligence Fundamentals by IBM (Jun 2024)
-- CS50 by Harvard University (Dec 2023)
+  certifications: [
+    {
+      title: "Artificial Intelligence Fundamentals",
+      issuer: "IBM",
+      date: "June 2024",
+    },
+    {
+      title: "CS50",
+      issuer: "Harvard University",
+      date: "Dec 2023",
+    },
+  ],
 
-Achievements:
-- 1st place in Blind Coding at BIT Durg
-- Best use of Voiceflow API at Hack The Space 2.0 Hackathon
+  achievements: [
+    "1st place in Blind Coding at BIT Durg",
+    "Best use of Voiceflow API at Hack The Space 2.0",
+  ],
 
-GitHub: https://github.com/sattar-abdul
-LinkedIn: https://www.linkedin.com/in/md-abdul-sattar/
-`;
+  links: {
+    github: "https://github.com/sattar-abdul",
+    linkedin: "https://www.linkedin.com/in/md-abdul-sattar/",
+  },
+};
 
-export default resumeBio;
+export default resumeData;
