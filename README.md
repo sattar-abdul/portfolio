@@ -33,3 +33,9 @@ To run locally:
 1. Open the project folder
 2. Run: `npm install`
 3. Run: `npm run dev`
+
+
+## Future Enhancements
+1. Add fade-out blur on nav bar (on dark mode) instead of sharp border
+2. Change Services Section
+3. Change font (Maybe)
