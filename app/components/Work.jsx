@@ -1,8 +1,20 @@
 import { workData } from "@/assets/assets";
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "motion/react";
 
 function Work() {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.offsetWidth * 0.7;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -35,63 +47,66 @@ function Work() {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-left md:text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        I have worked on various project. Here is the list of my Latest projects
+        I have worked on various projects. Here is the list of my latest projects
         or projects that I have contributed to along with tech stack used.
       </motion.p>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
-        className="grid grid-cols-auto350 my-10 gap-6 dark:text-black"
-      >
-        {workData.map((project, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            key={index}
-            className="group h-72 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer border-2 border-gray-500"
-            style={{ backgroundImage: `url(${project.bgImage})` }}
-          >
-            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none rounded-lg"></div>
+      <div className="relative">
 
-            {/* project title and description */}
-            <div className="bg-black/40 backdrop-blur-md shadow-sm w-11/12 rounded-md absolute top-5 left-1/2 -translate-x-1/2 py-2 px-4 flex items-center justify-between duration-500 group-hover:top-7 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:top-7 pointer-events-none group-hover:pointer-events-auto">
-              <div>
-                <h2 className="font-semibold text-white/80">{project.title}</h2>
-                <p className="text-sm text-white/70">{project.description}</p>
-              </div>
-            </div>
-            {/* Live and code buttons for projects */}
-            {(project.liveLink || project.codeLink) && (
-              <div className="bg-black/40 backdrop-blur-md shadow-sm rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-0 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 group-hover:bottom-2 pointer-events-none group-hover:pointer-events-auto">
-                <div className="flex gap-3">
-                  {project.liveLink && (
-                    <a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-black text-white text-sm px-4 py-1 rounded hover:bg-gray-800 transition"
-                    >
-                      Live
-                    </a>
-                  )}
-                  {project.codeLink && (
-                    <a
-                      href={project.codeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border border-white text-white text-sm px-4 py-1 rounded hover:bg-white hover:text-black transition"
-                    >
-                      Code
-                    </a>
-                  )}
+        <motion.div
+          ref={scrollRef}
+          className="flex overflow-x-scroll scroll-smooth snap-x snap-mandatory hide-scroll-bar gap-6 py-2"
+        >
+          {workData.map((project, index) => (
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
+              key={index}
+              className="snap-start flex-shrink-0 w-[90vw] sm:w-[40vw] md:w-[28rem]"
+            >
+              {/* Card */}
+              <div className="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 w-full">
+                {/* Full image */}
+                <img
+                  className="w-full rounded-t-xl h-60"
+                  src={project.bgImage}
+                  alt={project.title}
+                />
+                <div className="p-4 md:p-5 flex flex-col">
+                  <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                    {project.title}
+                  </h3>
+                  <p className="mt-1 text-gray-500 dark:text-neutral-400 flex-1">
+                    {project.description}
+                  </p>
+                  <div className="mt-3 flex gap-2">
+                    {project.liveLink && (
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-white bg-black text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 disabled:opacity-50 disabled:pointer-events-none"
+                      >
+                        Live
+                      </a>
+                    )}
+                    {project.codeLink && (
+                      <a
+                        href={project.codeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-300 bg-white text-gray-800 hover:bg-gray-100 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+                      >
+                        Code
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            )}
-          </motion.div>
-        ))}
-      </motion.div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </motion.div>
   );
 }

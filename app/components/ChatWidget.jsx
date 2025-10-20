@@ -58,8 +58,8 @@ export default function ChatWidget({ isDarkMode }) {
           <span className="flex space-x-1">
             <span>Ask AI !</span>
             <span className="animate-bounce">.</span>
-            <span className="animate-bounce delay-50">.</span>
-            <span className="animate-bounce delay-150">.</span>
+            <span className="animate-bounce [animation-delay:150ms]">.</span>
+            <span className="animate-bounce [animation-delay:300ms]">.</span>
           </span>
         </motion.div>
       )}

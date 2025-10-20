@@ -33,7 +33,7 @@ import menu_white from "./menu-white.png";
 import close_black from "./close-black.png";
 import close_white from "./close-white.png";
 import webdev_icon from "./webdev_icon.png";
-import frontend_icon from "./frontend_icon.png";
+import backend_icon from "./backend_icon.png";
 import right_arrow from "./right-arrow.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
@@ -76,7 +76,7 @@ export const assets = {
   close_black,
   close_white,
   webdev_icon,
-  frontend_icon,
+  backend_icon,
   right_arrow,
   send_icon,
   right_arrow_bold,
@@ -127,10 +127,10 @@ export const serviceData = [
       "I build modern, fast, and responsive websites tailored to your needs. From landing pages to full-stack web applications, using the latest technologies.",
   },
   {
-    icon: assets.frontend_icon,
-    title: "Front-End Development",
+    icon: assets.backend_icon,
+    title: "Back-End Development",
     description:
-      "I create visually appealing and interactive UI using HTML, CSS, JS, React, and Bootstrap. I focus on pixel-perfect design, responsiveness, and smooth user experience across all devices.",
+      'I Build and maintain the server-side logic of applications, including databases, APIs, and core application logic, ensuring the "behind-the-scenes" functionality works smoothly.',
   },
 ];
 
