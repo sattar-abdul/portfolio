@@ -2,7 +2,6 @@
 
 # Description
 This is my portfolio designed using React Next.js and Tailwind CSS.
-Reference video tutorial: https://www.youtube.com/watch?v=Y2kGqbzvAn4&t=159s 
 
 Web3forms is used for Contact Form by creating access key for my email. (this access key need not to be put on env file, its public key)
 
@@ -27,15 +26,16 @@ All other media is in assets folder
 
 
 ## How to run the project?
-The prokect is deployed on render.
+The project is deployed on render.
+Live: https://portfolio-six-xi-v8g7z9rtzv.vercel.app/
 
 To run locally:
 1. Open the project folder
-2. Run: `npm install`
+2. Install Dependency: `npm install`
 3. Run: `npm run dev`
 
 
 ## Future Enhancements
 1. Add fade-out blur on nav bar (on dark mode) instead of sharp border
-2. Change Services Section
 3. Change font (Maybe)
+3. Change Project card bg-color from black to theme color
