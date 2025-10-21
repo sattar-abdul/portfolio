@@ -1,6 +1,6 @@
-# Title: My portfolio
+# Title: Personal Portfolio
 
-# Description
+## Description
 This is my portfolio designed using React Next.js and Tailwind CSS.
 
 Web3forms is used for Contact Form by creating access key for my email. (this access key need not to be put on env file, its public key)
@@ -9,7 +9,7 @@ Framer Motion is used for animations in the site.
 
 Vercel is used for deployment. (Abdul's projects/portfolio)
 
-# Instructions 
+## Instructions 
 
 page.js is the main file that mounts all the components.
 layout.js handles the layout of web page.
