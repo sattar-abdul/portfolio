@@ -47,15 +47,22 @@ function Work() {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-left md:text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        I have worked on various projects. Here is the list of my latest projects
-        or projects that I have contributed to along with tech stack used.
+        I have worked on various projects. Here is the list of my latest
+        projects or projects that I have contributed to along with tech stack
+        used.
       </motion.p>
 
       <div className="relative">
-
         <motion.div
           ref={scrollRef}
-          className="flex overflow-x-scroll scroll-smooth snap-x snap-mandatory hide-scroll-bar gap-6 py-2"
+          className=" pl-2 flex overflow-x-scroll scroll-smooth snap-x snap-mandatory gap-6 py-2  
+          [&::-webkit-scrollbar]:w-2
+          [&::-webkit-scrollbar-track]:rounded-full
+          [&::-webkit-scrollbar-track]:bg-gray-100
+          [&::-webkit-scrollbar-thumb]:rounded-full
+          [&::-webkit-scrollbar-thumb]:bg-gray-300
+          dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+          dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
         >
           {workData.map((project, index) => (
             <motion.div
@@ -65,7 +72,7 @@ function Work() {
               className="snap-start flex-shrink-0 w-[86vw] sm:w-[40vw] md:w-[28rem]"
             >
               {/* Card */}
-              <div className="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-darkHover dark:border-neutral-700 dark:shadow-neutral-700/70 w-full">
+              <div className="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-darkTheme dark:border-neutral-700 dark:shadow-neutral-700/70 w-full">
                 {/* Full image */}
                 <img
                   className="w-full rounded-t-xl h-60"
