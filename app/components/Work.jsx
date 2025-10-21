@@ -62,10 +62,10 @@ function Work() {
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
               key={index}
-              className="snap-start flex-shrink-0 w-[90vw] sm:w-[40vw] md:w-[28rem]"
+              className="snap-start flex-shrink-0 w-[86vw] sm:w-[40vw] md:w-[28rem]"
             >
               {/* Card */}
-              <div className="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 w-full">
+              <div className="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-darkHover dark:border-neutral-700 dark:shadow-neutral-700/70 w-full">
                 {/* Full image */}
                 <img
                   className="w-full rounded-t-xl h-60"
