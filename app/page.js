@@ -9,7 +9,8 @@ import Services from "./components/Services";
 import Work from "./components/Work";
 import Tools from "./components/Tools";
 import ChatWidget from "./components/ChatWidget";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -48,8 +49,9 @@ export default function Home() {
       <Work isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
-      <ChatWidget isDarkMode={isDarkMode}/>
-      <SpeedInsights/>
+      <ChatWidget isDarkMode={isDarkMode} />
+      <SpeedInsights />
+      <Analytics />
     </>
   );
 }
