@@ -39,6 +39,7 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import chatbot from "./chatbot.png"
+import { Award, Trophy, GraduationCap, Star, Zap, Target } from 'lucide-react';
 
 export const assets = {
   user_image,
@@ -166,4 +167,35 @@ export const toolsData = [
   { toolName: "Node Js", toolIcon: assets.nodeJs_Logo },
   { toolName: "Bootstrap", toolIcon: assets.bootstrap_Logo },
   { toolName: "Redux", toolIcon: assets.redux_Logo },
+];
+
+
+export const highlightsData = [
+  {
+    icon: Trophy,
+    text: "SIH Finalist 2025",
+    color: "from-yellow-500 to-orange-500",
+    special: true  // added special flag to highlight
+  },
+  {
+    icon: Zap,
+    text: "Quick Learner",
+    color: "from-green-500 to-emerald-500"
+  },
+   {
+    icon: Award,
+    text: "Winner of Blind Coding Contest",
+    color: "from-blue-500 to-cyan-500",
+    special: true
+  },
+  {
+    icon: Target,
+    text: "CS50x Certified",
+    color: "from-red-500 to-rose-500",
+  },
+  {
+    icon: Star,
+    text: "Problem Solver",
+    color: "from-indigo-500 to-blue-500"
+  },
 ];
