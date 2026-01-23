@@ -20,14 +20,14 @@ export const botResponses = [
   {
     keywords: ["skills", "tech stack", "technologies", "languages"],
     answer:
-      "Abdul works with Java, C, Python, HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL, and Flask.",
+      "Abdul works mainly with Java and JavaScript but also know C, Python, HTML, CSS, React, Node.js, Express, MongoDB, MySQL, and Flask.",
   },
 
   // Tools & Technologies
   {
     keywords: ["tools", "libraries", "frameworks", "database"],
     answer:
-      "He has experience with Git, GitHub, Figma, Postman, VS Code, and vercel.",
+      "He has experience with Git, GitHub, Postman, VS Code, and vercel.",
   },
 
   // Projects — WanderLust
@@ -78,7 +78,7 @@ export const botResponses = [
   {
     keywords: ["achievements", "awards", "won", "prize"],
     answer:
-      "Abdul won 1st prize in Blind Coding at BIT Durg and Voiceflow API prize at Hack The Space 2024.",
+      "Abdul won 1st prize in Blind Coding at BIT Durg and Voiceflow API prize at Hack The Space 2024. He was also SIH-2025 Finalist",
   },
 
   // Languages
