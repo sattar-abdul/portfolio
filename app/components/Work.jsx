@@ -92,7 +92,7 @@ function Work() {
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-white bg-black text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 disabled:opacity-50 disabled:pointer-events-none"
+                        className="py-3 px-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-white bg-black text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 disabled:opacity-50 disabled:pointer-events-none"
                       >
                         Live
                       </a>

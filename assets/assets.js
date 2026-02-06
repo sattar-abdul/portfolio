@@ -115,8 +115,8 @@ export const workData = [
     description:
       "A simple and responsive Weather application using React, vanilla CSS and APIs",
     bgImage: "/work-4.png",
-    liveLink: "",
-    codeLink: "",
+    liveLink: "https://react-weather-app-tau-woad.vercel.app/",
+    codeLink: "https://github.com/sattar-abdul/React-Weather-App",
   },
 ];
 
