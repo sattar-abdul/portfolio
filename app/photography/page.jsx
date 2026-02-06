@@ -131,7 +131,16 @@ export default function Photography() {
 
           {/* prev */}
           <button
-            className="absolute left-6 text-white text-5xl select-none pl-3 pb-2 box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-full text-m px-6 py-2.7"
+            className="
+    absolute left-6
+    text-white text-5xl select-none
+    pb-3 px-3 
+    border border-white/30
+    rounded-full
+    hover:bg-white/20
+    focus:outline-none focus:ring-4 focus:ring-white/30
+    transition
+  "
             onClick={(e) => {
               e.stopPropagation();
               showPrev();
@@ -163,7 +172,14 @@ export default function Photography() {
 
           {/* next */}
           <button
-            className="absolute right-6 text-white text-5xl select-none pr-3 pb-2 box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-full text-m px-6 py-2.7"
+            className="absolute right-6
+    text-white text-5xl select-none
+    pb-3 px-3 
+    border border-white/30
+    rounded-full
+    hover:bg-white/20
+    focus:outline-none focus:ring-4 focus:ring-white/30
+    transition"
             onClick={(e) => {
               e.stopPropagation();
               showNext();
