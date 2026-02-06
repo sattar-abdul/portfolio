@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 
 function Navbar({ isDarkMode, setIsDarkMode }) {
   const sideMenuRef = useRef();
+  const isHome =
+    typeof window !== "undefined" && window.location.pathname === "/";
 
   const openMenu = () => {
     console.log("hel");
@@ -37,7 +39,7 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
         role="navigation"
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-2.5 flex items-center justify-between z-50 bg-[url('/footer-bg-color.png')] bg-center dark:bg-none bg-opacity-50 backdrop-blur-lg shadow-sm`}
       >
-        <a href="#top">
+        <a href={isHome ? "#top" : "/#top"}>
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             className="w-28 cursor-pointer mr-14"
@@ -47,28 +49,33 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
 
         <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent">
           <li>
-            <a className="font-Ovo" href="#top">
+            <a className="font-Ovo" href={isHome ? "#top" : "/#top"}>
               Home
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#about">
+            <a className="font-Ovo" href={isHome ? "#about" : "/#about"}>
               About me
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#services">
+            <a className="font-Ovo" href={isHome ? "#services" : "/#services"}>
               Services
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#work">
+            <a className="font-Ovo" href={isHome ? "#work" : "/#work"}>
               My Work
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#contact">
+            <a className="font-Ovo" href={isHome ? "#contact" : "/#contact"}>
               Contact me
+            </a>
+          </li>
+          <li>
+            <a className="font-Ovo" href="/photography">
+              Photography
             </a>
           </li>
         </ul>
@@ -86,7 +93,7 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
           </button>
 
           <a
-            href="#contact"
+            href={"/#contact"}
             className="font-Ovo hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 dark:border-white/50"
           >
             Contact
@@ -124,28 +131,33 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
           </div>
 
           <li>
-            <a href="#top" onClick={closeMenu}>
+            <a href={isHome ? "#top" : "/#top"} onClick={closeMenu}>
               Home
             </a>
           </li>
           <li>
-            <a href="#about" onClick={closeMenu}>
+            <a href={isHome ? "#about" : "/#about"} onClick={closeMenu}>
               About me
             </a>
           </li>
           <li>
-            <a href="#services" onClick={closeMenu}>
+            <a href={isHome ? "#services" : "/#services"} onClick={closeMenu}>
               Services
             </a>
           </li>
           <li>
-            <a href="#work" onClick={closeMenu}>
+            <a href={isHome ? "#work" : "/#work"} onClick={closeMenu}>
               My Work
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={closeMenu}>
+            <a href={isHome ? "#contact" : "/#contact"} onClick={closeMenu}>
               Contact me
+            </a>
+          </li>
+          <li>
+            <a href="/photography" onClick={closeMenu}>
+              Photography
             </a>
           </li>
         </ul>

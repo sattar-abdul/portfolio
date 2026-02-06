@@ -39,3 +39,8 @@ To run locally:
 1. Add fade-out blur on nav bar (on dark mode) instead of sharp border
 3. Change font.
 3. Change Project card bg-color from black to theme color ✅
+
+
+# Photography Page
+
+Images are managed via Cloudinary CMS-style, and fetched dynamically in the frontend.
