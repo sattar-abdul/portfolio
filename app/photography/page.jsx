@@ -133,13 +133,17 @@ export default function Photography() {
           <button
             className="
     absolute left-6
-    text-white text-5xl select-none
+    z-[110]
+    opacity-100
+    text-white text-5xl
     pb-3 px-3 
     border border-white/30
     rounded-full
-    hover:bg-white/20
-    focus:outline-none focus:ring-4 focus:ring-white/30
-    transition
+    bg-black/20
+    hover:bg-black/40
+    focus:outline-none
+    focus:ring-4 focus:ring-white/30
+    transition-colors
   "
             onClick={(e) => {
               e.stopPropagation();
@@ -173,13 +177,17 @@ export default function Photography() {
           {/* next */}
           <button
             className="absolute right-6
-    text-white text-5xl select-none
+    z-[110]
+    opacity-100
+    text-white text-5xl
     pb-3 px-3 
     border border-white/30
     rounded-full
-    hover:bg-white/20
-    focus:outline-none focus:ring-4 focus:ring-white/30
-    transition"
+    bg-black/20
+    hover:bg-black/40
+    focus:outline-none
+    focus:ring-4 focus:ring-white/30
+    transition-colors"
             onClick={(e) => {
               e.stopPropagation();
               showNext();
